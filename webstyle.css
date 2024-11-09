@@ -1,0 +1,411 @@
+/* 全局設定 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F3F2EF; /* 淡莫蘭迪灰色背景 */
+  color: #6D5F4E; /* 柔和的咖啡色文字 */
+}
+
+/* header */
+header {
+  background-color: #A8937B; /* 莫蘭迪咖啡色背景 */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+  border-radius: 0 0 10px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* 關於我 */
+.card {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 600px; /* 讓「關於我」區塊大小和技能區塊一致 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.card h2 {
+  color: #8C7565; /* 修改為莫蘭迪咖啡色 */
+  text-align: center; /* 標題居中 */
+}
+
+.card01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 使內容水平居中 */
+}
+
+.card01 .left-side {
+  flex: 1;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.card01 .left-side img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.card01 .right-side {
+  flex: 2;
+  text-align: left; /* 確保文字向左對齊 */
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+.contact-info a,
+.contact-info span {
+  display: block;
+  margin: 5px 0;
+  color: #6D5F4E;
+  text-decoration: none;
+}
+
+/* 更新 Instagram 和 Facebook 連結顏色 */
+.contact-info a.instagram,
+.contact-info a.facebook {
+  color: #4E3B31;
+}
+
+.contact-info a.instagram:hover,
+.contact-info a.facebook:hover {
+  color: #3B2A22;
+  text-decoration: underline;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* 技能 */
+#skills {
+  background-color: #D7C6B8;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#skills h2 {
+  color: #8C7565;
+  text-align: center;
+}
+
+#skills ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#skills li {
+  font-size: 18px;
+  color: #6D5F4E;
+  margin-bottom: 15px;
+}
+
+.skill-bar {
+  background-color: #E6D9CE;
+  border-radius: 8px;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.skill-progress {
+  background-color: #A8937B;
+  height: 100%;
+  border-radius: 8px;
+  width: 0;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.skill-progress.python {
+  animation-name: fillProgressPython;
+  animation-delay: 0.5s;
+}
+
+.skill-progress.java {
+  animation-name: fillProgressJava;
+  animation-delay: 1s;
+}
+
+.skill-progress.sql {
+  animation-name: fillProgressSQL;
+  animation-delay: 1.5s;
+}
+
+.skill-progress.web {
+  animation-name: fillProgressWeb;
+  animation-delay: 2s;
+}
+
+.skill-progress.analysis {
+  animation-name: fillProgressAnalysis;
+  animation-delay: 2.5s;
+}
+
+/* 定義每個技能的目標寬度動畫 */
+@keyframes fillProgressPython {
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes fillProgressJava {
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes fillProgressSQL {
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes fillProgressWeb {
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes fillProgressAnalysis {
+  to {
+    width: 85%;
+  }
+}
+
+/* 經驗 */
+.experience {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.experience h2 {
+  color: #8C7565;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.experience-item img {
+  width: 33%; 
+  height: auto; 
+  border-radius: 8px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.experience-item .text-content {
+  flex: 1;
+}
+
+.experience-item h3 {
+  margin: 0;
+  color: #8C7565;
+}
+
+.experience-item p {
+  margin-top: 5px;
+  color: #6D5F4E;
+}
+
+/* footer */
+footer {
+  background-color: #A8937B;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+  font-size: 20px;
+}
+
+footer h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* 手機版自適應 */
+@media screen and (max-width: 800px) {
+  /* 關於我區塊 */
+  .card {
+    padding: 15px;
+    margin: 15px 0;
+    width: 90%; /* 讓關於我區塊在手機版顯示寬一點 */
+  }
+
+  .card01 {
+    flex-direction: column;
+    align-items: center; /* 改為垂直排列 */
+  }
+
+  .card01 .left-side {
+    margin-right: 0;
+  }
+
+  .card01 .left-side img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card01 .right-side {
+    padding-left: 0;
+    text-align: left; /* 保證文字左對齊 */
+  }
+
+  /* 技能區塊 */
+  #skills {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .skill-bar {
+    height: 15px;
+  }
+
+  /* 經驗區塊 */
+  .experience-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* 改為在手機版中居中 */
+  }
+
+  .experience-item img {
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+  
+     
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
